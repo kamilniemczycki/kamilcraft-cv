@@ -10,7 +10,15 @@ const props = defineProps({
     token: {
         default: null,
         type: [String, null],
-    }
+    },
+    rodo: {
+        default: null,
+        type: [String, null],
+    },
+    loading: {
+        required: true,
+        type: Boolean,
+    },
 });
 
 const qrCodeLink = computed(() => {
@@ -27,14 +35,21 @@ const qrCodeLink = computed(() => {
             <MajorAchivments />
             <Education />
             <div class="print:absolute bottom-5 left-0 w-full pt-3 print:pt-0 px-2 print:px-6 text-[.5rem] leading-3 l text-justify text-[#E57D4C]">
-                Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb
-                niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z
-                dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018,
-                poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu
-                Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie
-                ochrony osób fizycznych w związku z przetwarzaniem danych
-                osobowych i w sprawie swobodnego przepływu takich danych oraz
-                uchylenia dyrektywy 95/46/WE (RODO)
+                <template v-if="!loading">
+                    <template v-if="rodo">
+                        {{ rodo }}
+                    </template>
+                    <template v-else>
+                        Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb
+                        niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z
+                        dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018,
+                        poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu
+                        Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie
+                        ochrony osób fizycznych w związku z przetwarzaniem danych
+                        osobowych i w sprawie swobodnego przepływu takich danych oraz
+                        uchylenia dyrektywy 95/46/WE (RODO).
+                    </template>
+                </template>
             </div>
         </div>
         <div class="relative print:w-1/3 print:flex-shrink-1 md:w-1/3 md:flex-shrink-1 bg-[#fff0e9]">

@@ -19,6 +19,10 @@ const locations = reactive([
     'Remote',
 ]);
 
+const position = ref(null);
+const mission = reactive([]);
+const rodo = ref(null);
+
 onMounted(() => {
     const router = useRoute();
     token.value = router.params['token'] ?? null;
@@ -48,14 +52,23 @@ function showData(response) {
         const data = response.data;
         email.value = data.email;
         tel.hasPhoneNumber = true;
-        tel.phoneNumber = data.phoneNumber;
-        tel.formattedPhoneNumber = data.formattedPhoneNumber;
+        tel.phoneNumber = data.phone.number;
+        tel.formattedPhoneNumber = data.phone.formattedNumber;
         while(locations.length > 0) {
             locations.pop();
+        }
+        if (data.position) {
+            position.value = data.position;
         }
         data.locations?.forEach(value => {
             locations.push(value);
         });
+        data.mission?.forEach(value => {
+            mission.push(value);
+        });
+        if (data.rodo) {
+            rodo.value = data.rodo;
+        }
         loading.value = false;
     }
 }
@@ -66,7 +79,9 @@ function showData(response) {
         <Header :loading="loading"
                 :email="email"
                 :tel="tel"
-                :locations="locations" />
-        <Body :token="token" />
+                :locations="locations"
+                :position="position"
+                :mission="mission" />
+        <Body :token="token" :rodo="rodo" :loading="loading" />
     </div>
 </template>

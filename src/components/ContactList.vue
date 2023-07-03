@@ -27,30 +27,6 @@ const location = computed(() => {
 });
 </script>
 
-<style lang="css">
-.animated-bg {
-  animation-duration: 10s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-name: placeHolderShimmer;
-  animation-timing-function: linear;
-  background-color: #f6f7f8;
-  background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
-  position: relative;
-  width: 150px;
-  height: 20px;
-}
-
-@keyframes placeHolderShimmer {
-  0% {
-    background-position: -800px 0
-  }
-  100% {
-    background-position: 800px 0
-  }
-}
-</style>
-
 <template>
     <ul v-if="loading">
         <li class="animated-bg"></li>
