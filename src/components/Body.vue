@@ -1,10 +1,10 @@
 <script setup>
 import { defineProps, computed, ref } from 'vue';
-import Education from '../components/Education.vue';
-import MajorAchivments from '../components/MajorAchivments.vue';
-import Skills from '../components/Skills.vue';
-import Certificates from '../components/Certificates.vue';
-import Links from '../components/Links.vue';
+import Education from './Body/Education.vue';
+import MajorAchivments from './Body/MajorAchivments.vue';
+import Skills from './Side/Skills.vue';
+import Certificates from './Side/Certificates.vue';
+import Links from './Side/Links.vue';
 
 const props = defineProps({
     token: {
@@ -21,11 +21,14 @@ const props = defineProps({
     },
 });
 
+const sourceCode = import.meta.env.VITE_SOURCE_CODE;
+
 const qrCodeLink = computed(() => {
+    const url = import.meta.env.VITE_CV_URL;
     if(props.token) {
-        return `https://cv.kamilcraft.com/show/${props.token}`;
+        return `${url}/show/${props.token}`;
     }
-    return 'https://cv.kamilcraft.com';
+    return url;
 });
 </script>
 
@@ -55,8 +58,8 @@ const qrCodeLink = computed(() => {
         <div class="relative print:w-1/3 print:flex-shrink-1 md:w-1/3 md:flex-shrink-1 bg-[#fff0e9]">
             <Skills />
             <Certificates />
-            <Links />
-            <div class="hidden print:block print:absolute bottom-5 right-0 w-full">
+            <Links class="pb-8 md:pb-0" />
+            <div class="hidden print:block print:absolute bottom-7 right-0 w-full">
                 <a :href="qrCodeLink" title="Link do CV w wersji przeglądarkowej" target="_blink">
                     <QRCode
                         render-as="svg"
@@ -66,7 +69,10 @@ const qrCodeLink = computed(() => {
                         level="L"
                         background="transparent" />
                 </a>
-                <div class="text-center">Wersja online</div>
+                <div class="text-center">CV w wersji online</div>
+            </div>
+            <div class="absolute bottom-1.5 right-0 w-full px-5 text-right md:text-center text-xs">
+                <a :href="sourceCode" target="_blank"><FontAwesomeIcon class="mr-1" :icon="['fab', 'github']"/>Kod źródłowy CV</a>
             </div>
         </div>
     </div>

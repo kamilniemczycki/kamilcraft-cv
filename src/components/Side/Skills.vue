@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { skills as importSkills, otherSkills as importOtherSkills } from '../composables/Skills.js';
+import { skills as importSkills, otherSkills as importOtherSkills } from '../../composables/Skills.js';
 
 const skills = ref(importSkills);
 const otherSkills = ref(importOtherSkills);

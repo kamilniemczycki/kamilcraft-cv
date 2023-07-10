@@ -1,8 +1,8 @@
 <script setup>
 import { defineProps } from 'vue';
 import { useRoute } from 'vue-router';
-import Mission from '../components/Mission.vue';
-import ContactList from './ContactList.vue';
+import Mission from './Header/Mission.vue';
+import ContactList from './Header/ContactList.vue';
 
 defineProps({
     loading: {

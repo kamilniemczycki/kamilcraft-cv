@@ -52,6 +52,9 @@ const skills = [
 const otherSkills = [
     'Composer',
     'GitHub',
+    'VSC',
+    'PhpStorm',
+    'WebStorm',
     'Node.js',
     'NPM',
     'Sqlite',
@@ -59,7 +62,8 @@ const otherSkills = [
     'Docker',
     'WSL',
     'LXC/LXD',
-    'i więcej?',
+    'REST',
+    'i więcej...',
 ];
 
 export {
