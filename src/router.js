@@ -1,16 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from './views/Home.vue';
+
+const Home = () => import('./views/Home.vue');
+const Show = () => import('./views/Show.vue');
+const NotFound = () => import('./views/NotFound.vue');
 
 export default createRouter({
     history: createWebHistory(),
     routes: [
         {
             path: '/',
+            name: 'Home',
             component: Home,
         },
         {
             path: '/show/:token',
-            component: Home,
-        }
+            name: 'Show',
+            component: Show,
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'NotFound',
+            component: NotFound
+        },
     ],
 });

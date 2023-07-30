@@ -13,7 +13,6 @@
 
 .bg-blob {
     background-image: var(--theme-bg-blob);
-    background-color: white;
     background-repeat: no-repeat;
     background-size: 170px;
     background-position: -25px -22px;

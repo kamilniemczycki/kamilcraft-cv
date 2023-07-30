@@ -36,7 +36,7 @@ const otherSkills = ref(importOtherSkills);
 <template>
     <div class="px-4 py-3">
         <h2 class="text-xl text-[#E57D4C] pb-2">Główne umiejętności</h2>
-        <ul class="flex flex-row flex-wrap justify-center align-baseline gap-4 text-xl">
+        <ul class="grid grid-cols-4 justify-between align-baseline gap-2 text-xl">
             <li
                 v-for="(skill, key) in skills"
                 :key="key"
@@ -48,7 +48,7 @@ const otherSkills = ref(importOtherSkills);
         </ul>
         <div class="mt-3">
             <h3 class="text-lg text-[#E57D4C] pb-1">Dodatkowo</h3>
-            <ul class="flex flex-row flex-wrap align-baseline gap-1">
+            <ul class="flex flex-row flex-wrap align-baseline gap-0.5">
                 <li v-for="(skill, key) in otherSkills" :key="key" class="border border-slate-200 rounded-md px-1.5 py-0.5 bg-white">{{ skill }}</li>
             </ul>
         </div>

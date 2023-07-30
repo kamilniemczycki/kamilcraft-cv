@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue';
 import { useRoute } from 'vue-router';
 import Mission from './Header/Mission.vue';
 import ContactList from './Header/ContactList.vue';
@@ -7,21 +6,35 @@ import ContactList from './Header/ContactList.vue';
 defineProps({
     loading: {
         tyle: Boolean,
+        default: false,
     },
     email: {
         type: String,
+        default: 'contact@kamilcraft.com',
     },
     tel: {
         type: Object,
+        default: {
+            hasPhoneNumber: false,
+            phoneNumber: '',
+            formattedPhoneNumber: '',
+        },
     },
     locations: {
         type: Array,
+        default: [
+            'Wrocław',
+            'Legnica',
+            'Remote',
+        ],
     },
     position: {
-        type: [String, null],
+        type: String,
+        default: null,
     },
     mission: {
         type: Array,
+        default: [],
     },
 });
 </script>
@@ -51,7 +64,7 @@ defineProps({
 </style>
 
 <template>
-    <div class="flex justify-between mx-1 mt-1 print:border-b-2 md:border-b-2">
+    <div class="bg-blob flex justify-between mx-1 mt-1 print:border-b-2 md:border-b-2">
         <div class="flex-shrink-0 w-32 h-32">
             <img class="w-full h-full" alt="Profilowe" src="/me.webp" />
         </div>

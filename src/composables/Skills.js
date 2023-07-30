@@ -1,51 +1,51 @@
 const skills = [
     {
+        class: 'linux',
+        faIcon: ['fab', 'linux'],
+        title: 'Ikona Linux',
+        text: 'GNU/Linux',
+    },
+    {
+        class: 'git',
+        faIcon: ['fab', 'git'],
+        title: 'Ikona Git',
+        text: 'Git',
+    },
+    {
         class: 'php',
         faIcon: ['fab', 'php'],
-        title: 'PHP Icon',
+        title: 'Ikona PHP',
         text: 'PHP 7/8',
     },
     {
         class: 'laravel',
         faIcon: ['fab', 'laravel'],
-        title: 'Laravel Icon',
+        title: 'Ikona Laravel',
         text: 'Laravel',
     },
     {
         class: 'js',
         faIcon: ['fab', 'js'],
-        title: 'JavaScript Icon',
+        title: 'Ikona JavaScript',
         text: 'JavaScript',
     },
     {
         class: 'vuejs',
         faIcon: ['fab', 'vuejs'],
-        title: 'Vue.js Icon',
+        title: 'Ikona Vue.js',
         text: 'Vue.js',
     },
     {
         class: 'html5',
         faIcon: ['fab', 'html5'],
-        title: 'HTML 5 Icon',
+        title: 'Ikona HTML 5',
         text: 'HTML',
     },
     {
         class: 'css3-alt',
         faIcon: ['fab', 'css3-alt'],
-        title: 'CSS 3 Icon',
+        title: 'Ikona CSS 3',
         text: 'CSS',
-    },
-    {
-        class: 'git',
-        faIcon: ['fab', 'git'],
-        title: 'Git Icon',
-        text: 'Git',
-    },
-    {
-        class: 'linux',
-        faIcon: ['fab', 'linux'],
-        title: 'Linux Icon',
-        text: 'GNU/Linux',
     },
 ];
 
@@ -63,6 +63,7 @@ const otherSkills = [
     'WSL',
     'LXC/LXD',
     'REST',
+    'RWD',
     'i więcej...',
 ];
 

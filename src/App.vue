@@ -1,4 +1,11 @@
 <script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const isErrorPage = computed(() => route.name === 'NotFound');
+
 function print() {
   window.print();
 }
@@ -17,10 +24,10 @@ function print() {
 </style>
 
 <template>
-  <div class="print-section">
+  <div v-if="!isErrorPage" class="print-section">
     <button class="px-4 py-2 w-full sm:w-80 font-semibold text-sm bg-orange-300 text-orange-700 rounded-full shadow-sm" @click="print">Drukuj CV</button>
   </div>
-  <main class="main bg-blob">
+  <main class="main bg-white">
     <router-view />
   </main>
 </template>
