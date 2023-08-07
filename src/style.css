@@ -1,65 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply text-sm text-slate-700;
-        font-family: 'Roboto', sans-serif;
-    }
+  body {
+    @apply text-sm text-slate-700;
+    font-family: "Roboto", sans-serif;
+  }
 }
 
 .bg-blob {
-    background-image: var(--theme-bg-blob);
-    background-repeat: no-repeat;
-    background-size: 170px;
-    background-position: -25px -22px;
+  background-image: var(--theme-bg-blob);
+  background-repeat: no-repeat;
+  background-size: 170px;
+  background-position: -25px -22px;
 }
 
 main {
-    max-width: 21cm;
-    margin: 0 auto;
-    border: 1px solid #dddddd;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  max-width: 21cm;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 :root {
-    --theme-bg-blob: url('data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CjxzdmcgaWQ9InN3LWpzLWJsb2Itc3ZnIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiPgoJPGRlZnM+IAoJCTxsaW5lYXJHcmFkaWVudCBpZD0ic3ctZ3JhZGllbnQiIHgxPSIwIiB4Mj0iMSIgeTE9IjEiIHkyPSIwIj4KCQkJPHN0b3AgaWQ9InN0b3AxIiBzdG9wLWNvbG9yPSJyZ2JhKDIyOC44ODgsIDEyNS4zMzQsIDc2LjMyMywgMSkiIG9mZnNldD0iMCUiPjwvc3RvcD4KCQkJPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDIxNS4yMjcsIDE4Ny42OTMsIDE0Mi4yNDUsIDEpIiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KCQk8L2xpbmVhckdyYWRpZW50PgoJPC9kZWZzPgoJPHBhdGggZmlsbD0idXJsKCNzdy1ncmFkaWVudCkiIGQ9Ik0xOC45LC0yMi42QzI1LjksLTE2LjYsMzQsLTEyLDM2LjgsLTUuMkMzOS41LDEuNywzNywxMC44LDMyLjcsMTkuN0MyOC41LDI4LjYsMjIuNiwzNy4zLDE0LjgsMzkuOEM2LjksNDIuMywtMi45LDM4LjUsLTExLjcsMzQuNEMtMjAuNiwzMC4yLC0yOC42LDI1LjcsLTMxLjksMTguOUMtMzUuMywxMi4yLC0zNCwzLjIsLTMyLC01LjJDLTMwLC0xMy43LC0yNy40LC0yMS42LC0yMS45LC0yNy43Qy0xNi41LC0zMy45LC04LjIsLTM4LjQsLTEuMSwtMzdDNS45LC0zNS42LDExLjksLTI4LjUsMTguOSwtMjIuNloiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwIDUwKSIgc3Ryb2tlLXdpZHRoPSIwIiBzdHlsZT0idHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZSAwczsiPjwvcGF0aD4KPC9zdmc+');
-    --theme-bg-gradient: url('/background/gradient.webp');
-    --theme-bg-grain: url('/background/grain.webp');
+  --theme-bg-blob: url("data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CjxzdmcgaWQ9InN3LWpzLWJsb2Itc3ZnIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiPgoJPGRlZnM+IAoJCTxsaW5lYXJHcmFkaWVudCBpZD0ic3ctZ3JhZGllbnQiIHgxPSIwIiB4Mj0iMSIgeTE9IjEiIHkyPSIwIj4KCQkJPHN0b3AgaWQ9InN0b3AxIiBzdG9wLWNvbG9yPSJyZ2JhKDIyOC44ODgsIDEyNS4zMzQsIDc2LjMyMywgMSkiIG9mZnNldD0iMCUiPjwvc3RvcD4KCQkJPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDIxNS4yMjcsIDE4Ny42OTMsIDE0Mi4yNDUsIDEpIiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KCQk8L2xpbmVhckdyYWRpZW50PgoJPC9kZWZzPgoJPHBhdGggZmlsbD0idXJsKCNzdy1ncmFkaWVudCkiIGQ9Ik0xOC45LC0yMi42QzI1LjksLTE2LjYsMzQsLTEyLDM2LjgsLTUuMkMzOS41LDEuNywzNywxMC44LDMyLjcsMTkuN0MyOC41LDI4LjYsMjIuNiwzNy4zLDE0LjgsMzkuOEM2LjksNDIuMywtMi45LDM4LjUsLTExLjcsMzQuNEMtMjAuNiwzMC4yLC0yOC42LDI1LjcsLTMxLjksMTguOUMtMzUuMywxMi4yLC0zNCwzLjIsLTMyLC01LjJDLTMwLC0xMy43LC0yNy40LC0yMS42LC0yMS45LC0yNy43Qy0xNi41LC0zMy45LC04LjIsLTM4LjQsLTEuMSwtMzdDNS45LC0zNS42LDExLjksLTI4LjUsMTguOSwtMjIuNloiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwIDUwKSIgc3Ryb2tlLXdpZHRoPSIwIiBzdHlsZT0idHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZSAwczsiPjwvcGF0aD4KPC9zdmc+");
+  --theme-bg-gradient: url("/background/gradient.webp");
+  --theme-bg-grain: url("/background/grain.webp");
 }
 
 a {
-    @apply underline;
+  @apply underline;
 }
 
 @media screen {
-    body {
-        background-image: var(--theme-bg-grain), var(--theme-bg-gradient);
-        background-position: top, top;
-        background-size: 75px, 100% 100%;
-    }
-    #cv {
-        @apply px-3 py-2;
-    }
+  body {
+    background-image: var(--theme-bg-grain), var(--theme-bg-gradient);
+    background-position: top, top;
+    background-size:
+      75px,
+      100% 100%;
+  }
+  #cv {
+    @apply px-3 py-2;
+  }
 }
 
 @page {
-    size: A4;
-    margin: 0;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
+  size: A4;
+  margin: 0;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 @media print {
-    main {
-        @apply border-0 w-[21cm] h-[29.7cm];
-    }
-    a {
-        @apply no-underline;
-    }
+  main {
+    @apply border-0 w-[21cm] h-[29.7cm];
+  }
+  a {
+    @apply no-underline;
+  }
 }

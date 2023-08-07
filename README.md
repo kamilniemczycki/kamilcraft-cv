@@ -15,6 +15,7 @@ npm install --legacy-peer-deps
 ```
 npm run dev
 ```
+
 Application should be available under `127.0.0.1:5173` or `localhost:5173`.
 
 ### Compilation
@@ -27,6 +28,14 @@ The executable files should be in the `dist` folder.
 
 ### Code formatting
 
-```
-npm run lint
-```
+1. Use the command to reformat all files in the project.
+
+   ```bash
+   npm run format
+   ```
+
+2. Use the command to display syntax errors.
+
+   ```
+   npm run lint
+   ```
