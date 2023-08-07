@@ -1,7 +1,32 @@
-# Vue 3 + Vite
+# cv.kamilcraft.com
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+The project concerns the CV website at [https://cv.kamilcraft.com](https://cv.kamilcraft.com). The website is created with RWD design techniques. The website is adapted for mobile devices, desktop browsers with A4 printability.
 
-## Recommended IDE Setup
+I used Vue.js in the project. Some of the content is static. The information about the projects is retrieved from the [API](https://github.com/kamilniemczycki/kamilcraft-api).
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Dependency installation
+
+```
+npm install --legacy-peer-deps
+```
+
+### Development
+
+```
+npm run dev
+```
+Application should be available under `127.0.0.1:5173` or `localhost:5173`.
+
+### Compilation
+
+```
+npm run build
+```
+
+The executable files should be in the `dist` folder.
+
+### Code formatting
+
+```
+npm run lint
+```
